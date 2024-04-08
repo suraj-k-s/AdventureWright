@@ -4,7 +4,7 @@
 
 <%@page import="java.sql.ResultSet"%>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
-
+<%@include file="Head.jsp" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -70,4 +70,5 @@
             }
         %>
     </body>
+    <%@include file="Foot.jsp" %>
 </html>

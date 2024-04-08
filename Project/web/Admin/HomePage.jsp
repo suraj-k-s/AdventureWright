@@ -1,7 +1,7 @@
 
 
 
-
+<%@include file="Head.jsp" %>
 <%@page import="java.sql.ResultSet"%>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
     <section class="main_content dashboard_part">
@@ -52,7 +52,7 @@
                             %>
                             <div class="single_staf">
                                 <div class="staf_thumb">
-                                    <img src="../Assets/Files/User/Photo/<%=result1.getString("user_photo")%>" alt="">
+                                    <img src="../Assets/Files/<%=result1.getString("user_photo")%>" alt="">
                                 </div>
                                 <h4><%=result1.getString("user_first_name")%></h4>
                                 <p><%=result1.getString("user_contact")%></p>

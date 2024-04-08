@@ -16,7 +16,7 @@
 
 
 
-
+<%@include file="Head.jsp" %>
 
 
 
@@ -43,7 +43,7 @@
             <label for="txtreply"></label>
         </form>
     </body>
-
+<%@include file="Foot.jsp" %>
 </html>
 
 

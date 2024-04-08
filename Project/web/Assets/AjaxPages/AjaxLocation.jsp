@@ -1,17 +1,15 @@
-<%-- 
-    Document   : AjaxLocation
-    Created on : 11 Mar, 2024, 11:10:18 AM
-    Author     : suraj
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<option>----select---</option>
+
+<%@page import="java.sql.ResultSet"%>
+<jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
+<%
+    String selQry = "select * from tbl_location where place_id = " + request.getParameter("did");
+    ResultSet rs = con.selectCommand(selQry);
+    while (rs.next()) {
+%>
+<option value="<%=rs.getString("location_id")%>"><%=rs.getString("location_name")%></option>
+<%
+    }
+
+%>

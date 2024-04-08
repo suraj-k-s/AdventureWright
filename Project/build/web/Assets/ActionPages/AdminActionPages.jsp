@@ -101,7 +101,7 @@
         %> 
         <script type="text/javascript">
             setTimeout(function() {
-                window.location.href = '../../Teacher/Lecture.jsp'
+                window.location.href = '../../Admin/Admin.jsp'
             }, 40);//40millisecend it go to next page
         </script>
         <%

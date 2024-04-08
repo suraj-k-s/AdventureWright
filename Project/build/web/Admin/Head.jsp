@@ -55,7 +55,7 @@
         <!-- sidebar part here -->
         <nav class="sidebar">
             <div class="logo d-flex justify-content-between">
-                <a href="HomePage.php"><h2 align="center">Welcome<br>Admin<br><%=session.getAttribute("adminname")%></h2></a>
+                <a href="HomePage.jsp"><h2 align="center">Welcome<br>Admin<br><%=session.getAttribute("adminname")%></h2></a>
                 <div class="sidebar_close_icon d-lg-none">
                     <i class="ti-close"></i>
                 </div>
@@ -65,7 +65,7 @@
                     <span>Dashboard</span>
                 </li>
                 <li class="mm-active">
-                    <a  href="HomePage.php"  aria-expanded="false">
+                    <a  href="HomePage.jsp"  aria-expanded="false">
                         <img src="../Assets/Template/Admin/img/menu-icon/1.svg" alt="">
                         <span>Dashboard</span>
                     </a>
@@ -74,19 +74,7 @@
                 <li class="side_menu_title">
                     <span>Applications</span>
                 </li>
-                <li class="">
-                    <a   class="has-arrow" href="javascript:void(0)" aria-expanded="false">
-                        <img src="../Assets/Template/Admin/img/menu-icon/2.svg" alt="">
-                        <span>Profile</span>
-                    </a>
-                    
-                   <ul>
-                   <li>
-                    
-                        <li><a href="MyProfile.php">My profile</a></li>
-                        <li><a href="EditProfile.php">Edit profile</a></li>
-                    </ul>
-                </li>
+               
                 <li class="">
                     <a   class="has-arrow" href="javascript:void(0)" aria-expanded="false">
                         <img src="../Assets/Template/Admin/img/menu-icon/2.svg" alt="">
@@ -96,10 +84,10 @@
                    <ul>
                    <li>
                     
-                        <li><a href="District.php">District</a></li>
-                        <li><a href="Place.php">Place</a></li>
-                        <li><a href="Location.php">Location</a></li>
-                        <li><a href="LocationGallery.php">Location Gallery</a></li>
+                        <li><a href="District.jsp">District</a></li>
+                        <li><a href="Place.jsp">Place</a></li>
+                        <li><a href="Location.jsp">Location</a></li>
+                        <li><a href="LocationGallery.jsp">Location Gallery</a></li>
                     </ul>
                 </li>
                 <li class="">
@@ -110,9 +98,9 @@
                     
                    <ul>
                    <li>
-                        <li><a href="NewGuidelist.php">New guide List</a></li>
-                        <li><a href="AcceptedGuidelist.php">Accepted List</a></li>
-                        <li><a href="Rejectedguidelist.php">Rejected List</a></li>
+                        <li><a href="NewGuidelist.jsp">New guide List</a></li>
+                        <li><a href="AcceptedGuidelist.jsp">Accepted List</a></li>
+                        <li><a href="Rejectedguidelist.jsp">Rejected List</a></li>
                     </ul>
                 </li>
                 <li class="">
@@ -124,9 +112,9 @@
                    <ul>
                    <li>
                     
-                        <li><a href="Package.php">Package </a></li>
-                        <li><a href="PackageType.php">Package type</a></li>
-                        <li><a href="PackageLocation.php">Package location</a></li>
+                        <li><a href="Package.jsp">Package </a></li>
+                        <li><a href="PackageType.jsp">Package type</a></li>
+                        <li><a href="PackageLocation.jsp">Package location</a></li>
                     </ul>
                 </li>
                 <li class="">
@@ -138,7 +126,7 @@
                    <ul>
                    <li>
                     
-                        <li><a href="RegistredUsers.php">Registred Users</a></li>
+                        <li><a href="RegistredUsers.jsp">Registred Users</a></li>
                     </ul>
                 </li>
                 <li class="">
@@ -150,10 +138,10 @@
                    <ul>
                    <li>
                     
-                        <li><a href="ViewuserBookings.php">View Bookings</a></li>
-                        <li><a href="AcceptedBookings.php">Confirmed/Guide assign </a></li>
-                        <li><a href="RejectedBookings.php">cancelled bookings</a></li>
-                        <li><a href="AssignedList.php">Bookings status</a></li>
+                        <li><a href="ViewuserBookings.jsp">View Bookings</a></li>
+                        <li><a href="AcceptedBookings.jsp">Confirmed/Guide assign </a></li>
+                        <li><a href="RejectedBookings.jsp">cancelled bookings</a></li>
+                        <li><a href="AssignedList.jsp">Bookings status</a></li>
                     </ul>
                 </li>
   
@@ -166,8 +154,8 @@
                    <ul>
                    <li>
                     
-                        <li><a href="Promocode.php">Add promocode</a></li>
-                        <li><a href="UsedPromocodes.php">View used promocodes</a></li>
+                        <li><a href="Promocode.jsp">Add promocode</a></li>
+                        <li><a href="UsedPromocodes.jsp">View used promocodes</a></li>
                     </ul>
                    <li class="">
                     <a   class="has-arrow" href="javascript:void(0)" aria-expanded="false">
@@ -178,13 +166,13 @@
                    <ul>
                    <li>
                     
-                        <li><a href="ViewComplaints.php">View complaints</a></li>
-                        <li><a href="ComplaintReply.php">Complaint reply</a></li>
-                        <li><a href="SolvedComplaints.php">Solved complaints</a></li>
+                        <li><a href="ViewComplaints.jsp">View complaints</a></li>
+                        <li><a href="ComplaintReply.jsp">Complaint reply</a></li>
+                        <li><a href="SolvedComplaints.jsp">Solved complaints</a></li>
                     </ul>
                    </li>
                    <li class="">
-                        <a   class="has-arrow" href="../logout.php" aria-expanded="false">
+                        <a   class="has-arrow" href="../logout.jsp" aria-expanded="false">
                             <img src="../Assets/Template/Admin/img/menu-icon/2.svg" alt="">
                             <span>Logout</span>
                         </a>	
@@ -192,3 +180,5 @@
             </ul>
 
         </nav>
+                <br><br><br><br>
+                <div id="tab" align="center">

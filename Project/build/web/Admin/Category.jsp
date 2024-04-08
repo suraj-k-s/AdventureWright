@@ -29,6 +29,7 @@
         
 
     %>
+    <%@include file="Head.jsp" %>
     <body>
         <section class="main_content dashboard_part">
             <div class="main_content_iner ">
