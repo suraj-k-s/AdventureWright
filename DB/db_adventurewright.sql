@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2024 at 03:01 AM
+-- Generation Time: Apr 09, 2024 at 10:36 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,7 +41,7 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`admin_name`, `admin_email`, `admin_contact`, `admin_password`, `admin_id`, `admin_image`) VALUES
-('Travel-get', 'travelget1@gmail.com', '9961294655', '123456', 10, 'Screenshot (2).png');
+('AdventureWright', 'adventurewright2@gmail.com', '8137892540', '123456', 10, 'Screenshot (2).png');
 
 -- --------------------------------------------------------
 
@@ -76,7 +76,20 @@ CREATE TABLE `tbl_district` (
 --
 
 INSERT INTO `tbl_district` (`district_name`, `district_id`) VALUES
-('Idukki', 1);
+('Idukki', 1),
+('Thrissur', 2),
+('Kozhikode', 3),
+('Malappuram', 4),
+('Thiruvananthapuram', 5),
+('Kollam', 6),
+('Alappuzha', 7),
+('Ernakulam', 8),
+('Kannur', 9),
+('Pathanamthitta', 10),
+('Kasarkode', 11),
+('Kottayam', 13),
+('Palakkad', 14),
+('Wayanad', 15);
 
 -- --------------------------------------------------------
 
@@ -105,7 +118,10 @@ CREATE TABLE `tbl_guide` (
 --
 
 INSERT INTO `tbl_guide` (`guide_first_name`, `guide_last_name`, `guide_contact`, `guide_email`, `guide_address`, `guide_gender`, `guide_photo`, `guide_proof`, `guide_experience`, `guide_password`, `place_id`, `guide_status`, `guide_id`) VALUES
-('Gude', 'In', '9876543210', 'guide@gmail.com', 'fvfvfv', 'Male', 'file_1598.png', 'file_1261.png', 'fffff', 'Qwerty@123', 1, 0, 2);
+('Gude', 'In', '9876543210', 'guide@gmail.com', 'fvfvfv', 'Male', 'file_1598.png', 'file_1261.png', 'fffff', 'Qwerty@123', 1, 1, 2),
+('Gude', 'In', '9876543210', 'guide@gmail.com', 'fvfvfv', 'Male', 'file_1888.jpg', 'file_1298.jpg', 'fffff', 'fvfvfv', 3, 1, 3),
+('Lanzz', 'dfhjg', '8137892540', 'lanzz21@gmail.com', 'sdghj', 'Male', 'file_1801.jpg', 'file_1464.jpg', 'asdfghj', '123456', 2, 1, 4),
+('Lanzz', 'dfhjg', '8137892540', 'lanzzz123@gmail.com', 'sdfgf', 'Male', 'file_1820.jpg', 'file_1421.jpg', 'sdfgh', '123456', 6, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -124,7 +140,9 @@ CREATE TABLE `tbl_location` (
 --
 
 INSERT INTO `tbl_location` (`location_id`, `place_id`, `location_name`) VALUES
-(1, 1, 'Edavetty');
+(1, 1, 'Edavetty'),
+(2, 3, 'Thrissur'),
+(3, 7, 'Kothamangalam');
 
 -- --------------------------------------------------------
 
@@ -243,7 +261,15 @@ CREATE TABLE `tbl_place` (
 --
 
 INSERT INTO `tbl_place` (`district_id`, `place_name`, `place_id`) VALUES
-(1, 'Thodupuzha', 1);
+(1, 'Thodupuzha', 1),
+(2, 'Vadakkunnathan', 2),
+(2, 'Athirappilly', 3),
+(2, 'Nelliyampathy', 4),
+(1, 'Vagamon', 6),
+(8, 'Munnar', 7),
+(3, 'Kozhikode Beach', 8),
+(7, 'Allappi', 9),
+(8, 'Marinedrive', 10);
 
 -- --------------------------------------------------------
 
@@ -295,7 +321,9 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_first_name`, `user_last_name`, `user_contact`, `user_email`, `user_address`, `user_dob`, `user_gender`, `user_password`, `user_place_id`, `user_photo`, `user_proof`, `user_id`) VALUES
-('Suraj ', 'K S', '8765432190', 'surajks@gmail.com', 'Qwerty@123', '2024-03-09', 'male', 'fvfsfvfvfv', 1, 'file_1032.png', 'file_1884.png', 1);
+('Suraj ', 'K S', '8765432190', 'surajks@gmail.com', 'Qwerty@123', '2024-03-09', 'male', 'fvfsfvfvfv', 1, 'file_1032.png', 'file_1884.png', 1),
+('Lanzz', 'dfhjg', '8137892540', 'lanzzz123@gmail.com', '1234567', '2002-09-20', 'male', 'dfghftfr', 3, 'file_1604.jpg', 'file_1914.jpg', 2),
+('dghjkh', 'sdfgh', '9587464572', 'aswerty21@gmail.com', '123456', '2001-04-01', 'male', 'sdgfh', 6, 'file_1631.jpg', 'file_1544.jpg', 3);
 
 --
 -- Indexes for dumped tables
@@ -411,19 +439,19 @@ ALTER TABLE `tbl_complaint`
 -- AUTO_INCREMENT for table `tbl_district`
 --
 ALTER TABLE `tbl_district`
-  MODIFY `district_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `district_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tbl_guide`
 --
 ALTER TABLE `tbl_guide`
-  MODIFY `guide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `guide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_location`
 --
 ALTER TABLE `tbl_location`
-  MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_location_gallery`
@@ -465,7 +493,7 @@ ALTER TABLE `tbl_package_type`
 -- AUTO_INCREMENT for table `tbl_place`
 --
 ALTER TABLE `tbl_place`
-  MODIFY `place_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `place_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tbl_promocode`
@@ -483,7 +511,7 @@ ALTER TABLE `tbl_usedpromocode`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

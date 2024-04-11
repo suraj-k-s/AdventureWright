@@ -1,74 +1,73 @@
+<%@ page import="java.sql.ResultSet" %>
 <jsp:useBean class="DB.ConnectionClass" id="con" />
+
+<%
+    if (request.getParameter("btn_Change") != null) {
+        String email = (String) session.getAttribute("useremail");
+        String userid = (String) session.getAttribute("gid");
+        String currentpwd = request.getParameter("txt_password");
+        String newpassword = request.getParameter("txt_newpassword");
+        String confirmpassword = request.getParameter("txt_confirmnewpassword");
+        
+        String selQry = "select * from tbl_user where user_email='" + email + "' and user_password='" + currentpwd + "' and user_id='" + userid + "'";
+        ResultSet resultuser = con.selectCommand(selQry);
+        
+        if (resultuser.next()) {
+            if (newpassword.equals(confirmpassword)) {
+                String upQry = "update tbl_user set user_password='" + newpassword + "' where user_id='" + userid + "'";
+                if (con.executeCommand(upQry)) {
+%>
+                    Password Changed...
+<%
+                } else {
+%>
+                    Database insertion failure
+<%
+                }
+            } else {
+%>
+                Password not same...
+<%
+            }
+        } else {
+%>
+            Please type correct current password
+<%
+        }
+    }
+%>
 
 <%@ include file="Head.jsp" %>
 
-<%
-String email = (String) session.getAttribute("useremail");
-String userId = (String) session.getAttribute("uid");
-
-if (request.getParameter("btn_Change") != null) {
-    String currentPassword = request.getParameter("txt_password");
-    String newPassword = request.getParameter("txt_newpassword");
-    String confirmPassword = request.getParameter("txt_confirmnewpassword");
-
-    String selectQuery = "SELECT * FROM tbl_user WHERE user_email=? AND user_password=? AND user_id=?";
-    PreparedStatement selectStatement = con.prepareStatement(selectQuery);
-    selectStatement.setString(1, email);
-    selectStatement.setString(2, currentPassword);
-    selectStatement.setString(3, userId);
-    ResultSet resultSet = selectStatement.executeQuery();
-
-    if (resultSet.next()) {
-        if (newPassword.equals(confirmPassword)) {
-            String updateQuery = "UPDATE tbl_user SET user_password=? WHERE user_id=?";
-            PreparedStatement updateStatement = con.prepareStatement(updateQuery);
-            updateStatement.setString(1, newPassword);
-            updateStatement.setString(2, userId);
-            int rowsAffected = updateStatement.executeUpdate();
-            if (rowsAffected > 0) {
-                out.println("Password Changed...");
-            } else {
-                out.println("Database update failure");
-            }
-        } else {
-            out.println("Passwords do not match");
-        }
-    } else {
-        out.println("Please enter correct current password");
-    }
-}
-%>
-
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Travel-Get: Change password</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
 </head>
+
 <body>
-    <form id="form1" name="form1" method="post" action="">
-        <table width="529" height="170" border="1">
-            <tr>
-                <td>Current Password</td>
-                <td><input type="password" name="txt_password" id="txt_password" /></td>
-            </tr>
-            <tr>
-                <td>New Password</td>
-                <td><input type="password" name="txt_newpassword" id="txt_newpassword" /></td>
-            </tr>
-            <tr>
-                <td>Confirm Password</td>
-                <td><input type="password" name="txt_confirmnewpassword" id="txt_confirmnewpassword" /></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" name="btn_Change" id="btn_change" value="Change" />
-                    <input type="reset" name="btn_cancel" id="btn_cancel" value="Cancel" />
-                </td>
-            </tr>
-        </table>
-        <a href="HomePage.jsp">Back to homepage</a>
-    </form>
-    <%@ include file="Foot.jsp" %>
+<form id="form1" name="form1" method="post" action="">
+  <table width="312" height="187" border="1">
+    <tr>
+      <td>Current password</td>
+      <td><input type="text" name="txt_password" id="txt_password" /></td>
+    </tr>
+    <tr>
+      <td>New password</td>
+      <td><input type="text" name="txt_newpassword" id="txt_newpassword" /></td>
+    </tr>
+    <tr>
+      <td>Confirm new password</td>
+      <td><input type="text" name="txt_confirmnewpassword" id="txt_confirmnewpassword" /></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="submit" name="btn_Change" id="btn_change" value="Change" />
+      <input type="reset" name="btn_cancel" id="btn_cancel" value="Cancel" /></td>
+    </tr>
+  </table>
+  <a href="HomePage.jsp">Back to homepage</a>
+</form>
 </body>
+<%@ include file="Foot.jsp" %>
 </html>

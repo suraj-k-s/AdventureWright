@@ -138,7 +138,7 @@
                    <ul>
                    <li>
                     
-                        <li><a href="ViewuserBookings.jsp">View Bookings</a></li>
+                        <li><a href="ViewUserBookings.jsp">View Bookings</a></li>
                         <li><a href="AcceptedBookings.jsp">Confirmed/Guide assign </a></li>
                         <li><a href="RejectedBookings.jsp">cancelled bookings</a></li>
                         <li><a href="AssignedList.jsp">Bookings status</a></li>

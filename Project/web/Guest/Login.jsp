@@ -31,10 +31,10 @@
 
         } else if (resultGuide.next()) {
 
-            session.setAttribute("gid", resultUser.getString("guide_id"));
-            session.setAttribute("guidefirstname", resultUser.getString("guide_first_name"));
-            session.setAttribute("guidelastname", resultUser.getString("guide_last_name"));
-            session.setAttribute("guideemail", resultUser.getString("guide_email"));
+            session.setAttribute("gid", resultGuide.getString("guide_id"));
+            session.setAttribute("guidefirstname", resultGuide.getString("guide_first_name"));
+            session.setAttribute("guidelastname", resultGuide.getString("guide_last_name"));
+            session.setAttribute("guideemail", resultGuide.getString("guide_email"));
             response.sendRedirect("../Guide/HomePage.jsp");
         } else {
             out.println("Please enter a valid email and password");
@@ -53,7 +53,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Travel-GET::Login</title>
+        <title>AdventureWright::Login</title>
     </head>
     <%@include file="Head.jsp" %>
 

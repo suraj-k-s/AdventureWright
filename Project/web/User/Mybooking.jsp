@@ -1,14 +1,13 @@
 <%@page import="java.sql.ResultSet"%>
 <jsp:useBean class="DB.ConnectionClass" id="con"/>
 
-<%@ include file="../Assets/Connection/Connection.jsp" %>
 <%@ include file="Head.jsp" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Travelget: User bookings</title>
+    <title>AdventureWright: User bookings</title>
 </head>
 
 <body background="url('')">

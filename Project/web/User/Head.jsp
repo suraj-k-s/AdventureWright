@@ -41,7 +41,7 @@
                     <li class="nav-item"><a href="Editprofile.jsp" class="nav-link">Edit Profile</a></li>
                     <li class="nav-item"><a href="Changepassword.jsp" class="nav-link">Change password</a></li>
                     <li class="nav-item"><a href="SearchPackage.jsp" class="nav-link">Search Package</a></li>
-                    <li class="nav-item"><a href="MyBooking.jsp" class="nav-link">My Booking</a></li>
+                    <li class="nav-item"><a href="Mybooking.jsp" class="nav-link">My Booking</a></li>
                     <li class="nav-item"><a href="../Logout.jsp" class="nav-link">Logout</a></li>
                 </ul>
             </div>

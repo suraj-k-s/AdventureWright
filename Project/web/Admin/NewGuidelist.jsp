@@ -15,7 +15,7 @@
             String upQry = "update tbl_guide set guide_status='1' where guide_id='" + aceptid + "'";
             if (con.executeCommand(upQry)) {
             
-                response.sendRedirect("NewGuideList.jsp");
+                response.sendRedirect("NewGuidelist.jsp");
             }
         }
     
@@ -26,7 +26,7 @@
             String upQry = "update tbl_guide set guide_status='2' where guide_id='" + rejid + "'";
             if (con.executeCommand(upQry)) {
             
-                response.sendRedirect("NewGuideList.jsp");
+                response.sendRedirect("NewGuidelist.jsp");
             }
         }
     

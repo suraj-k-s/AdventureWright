@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-    <title>Travel Get: Your adventure starts here</title>
+    <title>AdventureWright: Your adventure starts here</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
                 <div class="col-md-7 ftco-animate">
-                    <span class="subheading">Welcome to Travel Get</span>
+                    <span class="subheading">Welcome to AdventureWright</span>
                     <h1 class="mb-4" style="font-size: 76px;">Discover Your Favorite Place with Us</h1>
                     <p class="caps" style="font-size: 25px;">Travel to the any corner of the kerala,</p>
                     <p class="caps" style="font-size: 25px;"> without going around in circles</p>
@@ -71,7 +71,7 @@
             <div class="row d-flex">
                 <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
                     <div class="w-100">
-                        <span class="subheading">Welcome to Travel Get</span>
+                        <span class="subheading">Welcome to AdventureWright</span>
                         <h2 class="mb-4">It's time to start your adventure</h2>
                         <p>Kerala was named by Time magazine 2022 amoung the 50 extraordinary destinations to
                              explore in it's list of the worlds greatest places.</p>

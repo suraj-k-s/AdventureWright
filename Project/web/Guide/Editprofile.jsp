@@ -1,3 +1,4 @@
+<%@page import="java.sql.ResultSet"%>
 <jsp:useBean class="DB.ConnectionClass" id="con"/>
 
 <%
